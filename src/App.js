@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MyHome from './Home'
+import DebounceWithSetTimeout from './Debouncers/DebounceWithTimeOut';
+import InputDebounce from './Debouncers/DebounceWithInput';
+import LoadDebounce from './Debouncers/DebounceWithLoadash'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter> 
+       <Routes>
+       <Route  exact path='/'    element={<MyHome />} />
+       <Route   exact path='/setTimeoutDebounce'        element={<DebounceWithSetTimeout />}  />
+       <Route   exact path='/DebounceWithInput'        element={<InputDebounce />}  />
+       <Route   exact path='/DebounceLodash'        element={<LoadDebounce />}  />
+
+
+
+       </Routes>
+    </BrowserRouter>
+      
   );
 }
 
