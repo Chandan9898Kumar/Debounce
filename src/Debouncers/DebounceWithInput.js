@@ -3,7 +3,7 @@ import { DebounceInput } from 'react-debounce-input';
 import '../App.css';
 import { useNavigate } from "react-router-dom";
 const URL = "https://api.postalpincode.in/pincode"
-
+// npm react-debounce-input 
 const InputDebounce = () => {
     const navigate=useNavigate()
     const [storeData, setStoreData] = useState([])

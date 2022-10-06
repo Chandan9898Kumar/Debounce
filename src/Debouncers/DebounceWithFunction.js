@@ -24,14 +24,22 @@ const DebounceWithFunction=()=>{
   const debounce = (func) => {
     let timer;
     return function () {
+        // argiments is inBuilt. whatever we pass in function that is called arguments.
       let args=arguments
       const context = this;
       if (timer) {
         clearTimeout(timer);
       }
+
       timer = setTimeout(() => {
         func.apply(context, args);
       }, 500);
+      /////      OR    //////
+
+    //   timer = setTimeout(() => {
+    //     func(...args);
+    //   }, 500);
+
     };
   };
 
@@ -47,7 +55,12 @@ const DebounceWithFunction=()=>{
   );
   };
 
+//   Our debounce will be returning us a new function on every rendering. 
+//   That we do not want so that we will use the useCallBack hook. 
+//   It will provide us the memoized callback.
+
   const optimizedFn =useCallback(debounce(handleChange),[])
+  console.log(optimizedFn,'opti func >>>>>>>>>>>>>')
   return (
     <>
       <h2 style={{ textAlign: "center" }}>Debouncing in React JS with function</h2>
