@@ -10,7 +10,9 @@ return(
    <label>Home Page</label><br /><br />
    <NavLink  to='/setTimeoutDebounce'>Debounce  with SetTimeout</NavLink><br /><br /><br />
     <NavLink to='/DebounceWithInput'>Debounce with Input Key</NavLink><br /><br /><br />
-    <NavLink to='/DebounceLodash'>LodAsh Debounce</NavLink>
+    <NavLink to='/DebounceLodash'>LodAsh Debounce</NavLink><br /><br /><br /><br />
+    <NavLink to='/DebounceWithFunction'>Debounce with Function</NavLink>
+
 
    </div>
     </>
