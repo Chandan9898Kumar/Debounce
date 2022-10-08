@@ -60,7 +60,6 @@ const DebounceWithFunction=()=>{
 //   It will provide us the memoized callback.
 
   const optimizedFn =useCallback(debounce(handleChange),[])
-  console.log(optimizedFn,'opti func >>>>>>>>>>>>>')
   return (
     <>
       <h2 style={{ textAlign: "center" }}>Debouncing in React JS with function</h2>
